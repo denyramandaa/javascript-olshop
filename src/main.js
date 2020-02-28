@@ -1,11 +1,11 @@
 import Vue from 'vue'
-// import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import VueCookies from 'vue-cookies'
 import App from './App.vue'
 import { routes } from './routes.js'
 
-// Vue.use(VueResource);
+import { store } from './store/store'
+
 Vue.use(VueRouter);
 Vue.use(VueCookies);
 
@@ -17,5 +17,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
