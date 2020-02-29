@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full w-full bg-orange-200 relative">   
+    <div class="w-full w-full bg-orange-200 relative min-h-screen">   
         <router-view></router-view>
         <app-trolly></app-trolly>
     </div>

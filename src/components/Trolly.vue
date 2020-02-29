@@ -8,8 +8,8 @@
           </div>
           <hr class="border-yellow-800">
           <div class="pt-1 flex justify-between text-yellow-800">
-            <div>Rp {{ item.price }} <span class="font-bold">x {{ itemLength(item) }}</span></div>
-            <div class="font-bold">Rp {{ totalPrice(item) }}</div>
+            <div>{{ item.price | convertToRupiah }} <span class="font-bold">x {{ itemLength(item) }}</span></div>
+            <div class="font-bold">{{ totalPrice(item) | convertToRupiah}}</div>
           </div>
           <div class="flex justify-end pt-2">
             <button class="w-1/6 bg-orange-400 hover:bg-orange-500 text-white font-bold mr-1 rounded focus:outline-none">+</button>
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="mb-2 text-white text-right">
-          Total: <span class="font-bold">6700</span>
+          Total: Rp <span class="font-bold text-2xl">{{ finalPrice(trolly) | convertToRupiah }}</span>
         </div>
         <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none w-full">
           Checkout
@@ -41,7 +41,8 @@ export default {
       trolly: 'trolly',
     }),
     itemCounter(){
-      return this.trolly.filter((v, i, a) => a.indexOf(v) === i)
+      var res = this.trolly.filter((v, i, a) => a.indexOf(v) === i);
+      return res;
     }
   },
   methods:{
@@ -54,7 +55,10 @@ export default {
       return res;
     },
     finalPrice(a){
-      // 
+      var res = a.reduce(function(total, num){
+        return total + num.price
+      }, 0);
+      return res;
     }
   }
 }

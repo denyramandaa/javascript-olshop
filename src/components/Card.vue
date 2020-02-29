@@ -4,7 +4,7 @@
       <img class="w-full" :src="item.image" :alt="item.name">
       <div class="px-6 py-4">
         <div class="font-bold text-xl text-yellow-800">{{ item.name }}</div>
-        <div class="mb-2 text-yellow-700">Price: <span class="font-bold">{{ item.price }}</span></div>
+        <div class="mb-2 text-yellow-700">Price: <span class="font-bold">{{ item.price | convertToRupiah }}</span></div>
         <p class="text-yellow-700 text-sm">
           {{ item.description }}
         </p>
