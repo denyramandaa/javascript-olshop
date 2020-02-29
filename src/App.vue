@@ -1,11 +1,17 @@
 <template>
-    <div class="w-full">   
+    <div class="w-full w-full bg-orange-200 relative">   
         <router-view></router-view>
+        <app-trolly></app-trolly>
     </div>
 </template>
 
 <script>
-    export default {}
+import AppTrolly from './components/Trolly.vue'
+export default {
+    components:{
+        AppTrolly
+    }
+}
 </script>
 
 <style>

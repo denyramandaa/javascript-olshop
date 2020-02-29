@@ -1,30 +1,51 @@
 <template>
-  <div>
+    <div>
       <app-header></app-header>
-      <div class="flex justify-center align-itemsflex justify-center items-center min-h-screen">
-        <p>Kategory Index {{ $route.params.id }}</p>
+      <div class="py-32 container mx-auto"> 
+        <h2 class="text-2xl m-2 font-serif text-yellow-800">{{ cat }} Category</h2>
+        <div class="w-full flex flex-wrap">
+          <div class="p-2 w-1/4" v-for="(item, key) in products" :key="key">
+            <app-card :item="item"></app-card>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 </template>
 <script>
 import AppHeader from './Header.vue'
-import { mapState, mapGetters } from 'vuex'
+import AppCard from './Card.vue'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   components:{
-      AppHeader
+      AppHeader,
+      AppCard
   },
   data(){
     return{
-      id: this.$route.params.id,
+      cat: this.$route.params.id,
     }
   },
   watch:{
     '$route'(to, from){
-      this.id = to.params.id;
+      this.cat = to.params.id;
+      this.fetchData(this.cat);
     }
+  },
+  methods:{
+    ...mapActions({
+      fetchData: 'fetchDataByCategory'
+    }),
+  },
+  computed: {
+    ...mapGetters({
+      products: 'products',
+    }),
+  },
+  created(){
+    this.fetchData(this.cat);
   },
   beforeRouteEnter (to, from, next) {
     $cookies.get('local_login') ? next() : next({ name: 'login' })
-  }
+  },
 }
 </script>
