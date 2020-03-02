@@ -2,7 +2,7 @@
   <div class="fixed w-64 trolly top-0 right-0 bg-yellow-800" :class="{ show : trollyShow && !trollyIsEmpty }">
     <div class="relative min-h-screen py-16 px-2 flex justify-center items-center">
       <div class="trolly__wrapper w-full">
-        <div class="w-full bg-orange-200 mb-2 p-2 rounded" v-for="(item, key) in itemCounter" :key="key">
+        <div class="w-full bg-orange-200 mb-2 p-2 rounded" v-for="(item, key) in counterTrolly" :key="key">
           <div class="pb-1 text-yellow-800">
             {{ item.name }}
           </div>
@@ -47,9 +47,11 @@ export default {
   computed: {
     ...mapGetters({
       trolly: 'trolly',
+      counterTrolly: 'counterTrolly'
     }),
     itemCounter(){
-      return this.trolly.filter((v, i, a) => a.indexOf(v) === i);
+      return [...new Set(this.trolly)]
+      // return this.trolly.filter((v, i, a) => a.indexOf(v) === i);
     }
   },
   watch:{
@@ -71,7 +73,7 @@ export default {
     }),
     checkOut(a){
       this.trollyShow = false;
-      this.$router.push({ name: 'checkout' });
+      this.$router.push({ name: 'checkout', query: { back : this.$route.fullPath } });
     },
     itemLength(a){
       return this.trolly.filter(d => d.id === a.id).length;

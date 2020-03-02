@@ -6,7 +6,7 @@
                 <h1 class="text-3xl text-center">Payment</h1>
             </div>
             <div class="mb-4">
-              <div class="font-mono" v-for="(item, key) in itemCounter" :key="key">
+              <div class="font-mono" v-for="(item, key) in counterTrolly" :key="key">
                   <div> {{ item.name }} </div>
                   <div class="flex justify-between">
                       <div>{{ item.price | convertToRupiah }} <span class="font-bold">x {{ itemLength(item) }}</span></div>
@@ -32,22 +32,21 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   data(){
     return{
+      ho: 'wkwk'
     }
   },
   computed: {
     ...mapGetters({
       trolly: 'trolly',
+      counterTrolly: 'counterTrolly'
     }),
-    itemCounter(){
-      return this.trolly.filter((v, i, a) => a.indexOf(v) === i);
-    }
   },
   methods:{
     ...mapActions({
       printBill: 'printBill',
     }),
     cancel(){
-      this.$router.push({ name: 'product' });
+      this.$router.push({ path: this.$route.query.back });
     },
     pay(){
       this.printBill();
@@ -64,7 +63,10 @@ export default {
         return total + num.price
       }, 0);
     },
-  }
+  },
+  beforeRouteEnter (to, from, next) {
+    $cookies.get('local_login') ? next() : next({ name: 'login', query: { redirect: 'home' } })
+  },
 }
 </script>
 

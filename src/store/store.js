@@ -24,6 +24,16 @@ export const store = new Vuex.Store({
     trolly(state){
       return state.trolly
     },
+    counterTrolly(state){
+      if(!state.trolly.length) return
+      var temp = []
+      for(var i=0;i<state.trolly.length;i++){
+        if(!temp.some(el => el.id === state.trolly[i].id)){
+          temp.push(state.trolly[i])
+        }
+      }
+      return temp
+    }
   },
   actions: {
     addTrolly({commit}, payload) {

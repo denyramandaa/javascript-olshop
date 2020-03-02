@@ -5,7 +5,7 @@
       "name" : "Disruptor",
       "image" : "/src/assets/monster/disruptor.png",
       "price" : 10000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -13,7 +13,7 @@
       "name" : "Doom Bringer",
       "image" : "/src/assets/monster/doom_bringer.png",
       "price" : 8000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -21,7 +21,7 @@
       "name" : "Dragon Knight",
       "image" : "/src/assets/monster/dragon_knight.png",
       "price" : 8000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -29,7 +29,7 @@
       "name" : "Drow Ranger",
       "image" : "/src/assets/monster/drow_ranger.png",
       "price" : 12000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "agility"
     },
     {
@@ -37,7 +37,7 @@
       "name" : "Earth Spirit",
       "image" : "/src/assets/monster/earth_spirit.png",
       "price" : 5000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -45,7 +45,7 @@
       "name" : "Earthshaker",
       "image" : "/src/assets/monster/earthshaker.png",
       "price" : 6700,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -53,7 +53,7 @@
       "name" : "Elder Titan",
       "image" : "/src/assets/monster/elder_titan.png",
       "price" : 9000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -61,7 +61,7 @@
       "name" : "Ember Spirit",
       "image" : "/src/assets/monster/ember_spirit.png",
       "price" : 8600,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "agility"
     },
     {
@@ -69,7 +69,7 @@
       "name" : "Enchantress",
       "image" : "/src/assets/monster/enchantress.png",
       "price" : 5600,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -77,7 +77,7 @@
       "name" : "Enigma",
       "image" : "/src/assets/monster/enigma.png",
       "price" : 10000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -85,7 +85,7 @@
       "name" : "Faceless Void",
       "image" : "/src/assets/monster/faceless_void.png",
       "price" : 4500,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "agility"
     },
     {
@@ -93,7 +93,7 @@
       "name" : "Furion",
       "image" : "/src/assets/monster/furion.png",
       "price" : 9000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -101,7 +101,7 @@
       "name" : "Grimstroke",
       "image" : "/src/assets/monster/grimstroke.png",
       "price" : 7500,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -109,7 +109,7 @@
       "name" : "Gyrocopter",
       "image" : "/src/assets/monster/gyrocopter.png",
       "price" : 8900,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "agility"
     },
     {
@@ -117,7 +117,7 @@
       "name" : "Huskar",
       "image" : "/src/assets/monster/huskar.png",
       "price" : 9800,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -125,7 +125,7 @@
       "name" : "Invoker",
       "image" : "/src/assets/monster/invoker.png",
       "price" : 12000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -133,7 +133,7 @@
       "name" : "Jakiro",
       "image" : "/src/assets/monster/jakiro.png",
       "price" : 7500,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -141,7 +141,7 @@
       "name" : "Juggernaut",
       "image" : "/src/assets/monster/juggernaut.png",
       "price" : 5600,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "agility"
     },
     {
@@ -149,7 +149,7 @@
       "name" : "Keeper of the Light",
       "image" : "/src/assets/monster/keeper_of_the_light.png",
       "price" : 2000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "intelligence"
     },
     {
@@ -157,7 +157,7 @@
       "name" : "Kunkka",
       "image" : "/src/assets/monster/kunkka.png",
       "price" : 8700,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     },
     {
@@ -165,7 +165,7 @@
       "name" : "Legion Commander",
       "image" : "/src/assets/monster/legion_commander.png",
       "price" : 4000,
-      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
       "category": "strength"
     }
   ],
