@@ -8,16 +8,16 @@
             <div class="mb-4">
               <div class="font-mono" v-for="(item, key) in counterTrolly" :key="key">
                   <div> {{ item.name }} </div>
-                  <div class="flex justify-between">
+                  <div class="flex justify-between pb-1">
                       <div>{{ item.price | convertToRupiah }} <span class="font-bold">x {{ itemLength(item) }}</span></div>
                       <div>{{ totalPrice(item) | convertToRupiah}}</div>
                   </div>
-                  <hr class="border-dotted">
+                  <hr class="border-dotted pt-1">
               </div>
             </div>
             <div class="mb-4"><div class="flex justify-between font-mono font-bold"><div>Total</div><div>{{ finalPrice(trolly) | convertToRupiah }}</div></div></div>
             <div class="flex items-center justify-center">
-                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none" @click="pay()"> Print Bill </button>
+                <button type="button" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none" @click="pay()"> Print Bill </button>
             </div>
         </div>
         <div class="text-center">
@@ -30,11 +30,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 export default {
-  data(){
-    return{
-      ho: 'wkwk'
-    }
-  },
   computed: {
     ...mapGetters({
       trolly: 'trolly',

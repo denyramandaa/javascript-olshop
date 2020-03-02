@@ -26,8 +26,8 @@ export const store = new Vuex.Store({
     },
     counterTrolly(state){
       if(!state.trolly.length) return
-      var temp = []
-      for(var i=0;i<state.trolly.length;i++){
+      const temp = []
+      for(let i=0;i<state.trolly.length;i++){
         if(!temp.some(el => el.id === state.trolly[i].id)){
           temp.push(state.trolly[i])
         }
@@ -88,8 +88,8 @@ export const store = new Vuex.Store({
       state.trolly.push(payload);
     },
     unsetTrolly(state, payload){
-      const index = state.trolly.findIndex( ob => ob.id === payload.id )
-      if ( index > -1 ) state.trolly.splice(index, 1)
+      const getTheItem = state.trolly.findIndex( ob => ob.id === payload.id )
+      if ( getTheItem > -1 ) state.trolly.splice(getTheItem, 1)
     },
     removeTrolly(state, payload){
       state.trolly = state.trolly.filter( ob => ob.id !== payload.id )
