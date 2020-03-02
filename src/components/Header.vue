@@ -5,8 +5,8 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div class="text-sm lg:flex-grow">
-        <router-link :to="{ name: 'home' }" tag="a" class="block mt-4 lg:inline-block lg:mt-0 text-white mr-4">All Categories</router-link>
-        <router-link  v-for="(a,key) in categories" :key="key" :to="{ name: 'product', params: { id: a } }" tag="a" class="block mt-4 lg:inline-block lg:mt-0 text-white mr-4">{{ a }}</router-link>
+        <router-link :to="{ name: 'product' }" tag="a" class="block mt-4 lg:inline-block lg:mt-0 text-white mr-4">All Products</router-link>
+        <router-link  v-for="(a,key) in categories" :key="key" :to="{ name: 'product', query: { category: a } }" tag="a" class="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 capitalize">{{ a }}</router-link>
       </div>
       <div class="text-white">
         <span>Hi, {{ isLoggedIn }}</span> | <a class="block mt-4 lg:inline-block lg:mt-0 text-white underline cursor-pointer" @click.prevent="logOut()">Log Out</a>

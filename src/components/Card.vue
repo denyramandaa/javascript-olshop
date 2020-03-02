@@ -33,7 +33,6 @@ export default {
     }),
     send(a){
       this.setTrolly(a);
-      console.log(this.$store.state.trolly)
     }
   }
 }

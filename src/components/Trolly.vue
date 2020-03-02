@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed w-64 trolly top-0 right-0 bg-yellow-800" :class="{ show : trollyShow }">
-    <div class="relative min-h-screen py-16 px-2 flex justify-center items-center" v-if="trolly != ''">
+  <div class="fixed w-64 trolly top-0 right-0 bg-yellow-800" :class="{ show : trollyShow && !trollyIsEmpty }">
+    <div class="relative min-h-screen py-16 px-2 flex justify-center items-center">
       <div class="trolly__wrapper w-full">
         <div class="w-full bg-orange-200 mb-2 p-2 rounded" v-for="(item, key) in itemCounter" :key="key">
           <div class="pb-1 text-yellow-800">
@@ -11,19 +11,26 @@
             <div>{{ item.price | convertToRupiah }} <span class="font-bold">x {{ itemLength(item) }}</span></div>
             <div class="font-bold">{{ totalPrice(item) | convertToRupiah}}</div>
           </div>
-          <div class="flex justify-end pt-2">
-            <button class="w-1/6 bg-orange-400 hover:bg-orange-500 text-white font-bold mr-1 rounded focus:outline-none">+</button>
-            <button class="w-1/6 bg-orange-400 hover:bg-orange-500 text-white font-bold rounded focus:outline-none">-</button>
+          <div class="flex justify-between pt-2">
+            <div class="w-2/4">
+              <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold rounded focus:outline-none px-2" @click="removeItem(item)">Remove</button>
+            </div>
+            <div class="flex w-2/4 justify-end">
+              <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold mr-1 rounded focus:outline-none w-1/4" @click="increaseItem(item)">+</button>
+              <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold rounded focus:outline-none w-1/4" @click="decreaseItem(item)">-</button>
+            </div>
           </div>
         </div>
         <div class="mb-2 text-white text-right">
           Total: Rp <span class="font-bold text-2xl">{{ finalPrice(trolly) | convertToRupiah }}</span>
         </div>
-        <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none w-full">
+        <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none w-full" @click="checkOut(itemCounter)">
           Checkout
         </button>
       </div>
-      <div class="absolute trolly--button" @click="trollyShow =! trollyShow"></div>
+      <transition name="fade">
+        <div class="absolute trolly--button" @click="trollyShow =! trollyShow" v-if="!trollyIsEmpty"></div>
+      </transition>
     </div>
   </div>
 </template>
@@ -34,6 +41,7 @@ export default {
   data(){
     return{
       trollyShow: false,
+      trollyIsEmpty: true
     }
   },
   computed: {
@@ -41,24 +49,49 @@ export default {
       trolly: 'trolly',
     }),
     itemCounter(){
-      var res = this.trolly.filter((v, i, a) => a.indexOf(v) === i);
-      return res;
+      return this.trolly.filter((v, i, a) => a.indexOf(v) === i);
+    }
+  },
+  watch:{
+    trolly(){
+      if(this.trolly != ''){
+        this.trollyIsEmpty = false
+        this.trollyShow = true
+      }else{
+        this.trollyIsEmpty = true
+        this.trollyShow = false
+      }
     }
   },
   methods:{
+    ...mapActions({
+      setTrolly: 'addTrolly',
+      decreaseTrolly: 'decreaseTrolly',
+      removeTrolly: 'removeTrolly'
+    }),
+    checkOut(a){
+      this.trollyShow = false;
+      this.$router.push({ name: 'checkout' });
+    },
     itemLength(a){
-      var res = this.trolly.filter(d => d.id === a.id).length
-      return res;
+      return this.trolly.filter(d => d.id === a.id).length;
     },
     totalPrice(a){
-      var res = a.price * this.itemLength(a);
-      return res;
+      return a.price * this.itemLength(a);
     },
     finalPrice(a){
-      var res = a.reduce(function(total, num){
+      return a.reduce(function(total, num){
         return total + num.price
       }, 0);
-      return res;
+    },
+    increaseItem(a){
+      this.setTrolly(a);
+    },
+    decreaseItem(a){
+      this.decreaseTrolly(a);
+    },
+    removeItem(a){
+      this.removeTrolly(a);
     }
   }
 }
@@ -84,5 +117,12 @@ export default {
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .8s;
+    will-change: opacity;
+  }
+  .fade-enter, .fade-leave-to {
+      opacity: 0
   }
 </style>

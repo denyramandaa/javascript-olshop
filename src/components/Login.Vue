@@ -14,35 +14,45 @@
             <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none" type="submit">Sign In</button>
           </div>
         </form>
+        <div>{{ this.users.username }}</div>
     </div>
 </template>
 
 <script>
-    export default {
-        data(){
-            return{
-               user: {
-                   username: 'admin',
-                   password: 'admin'
-               },
-               loginError: false,
-            }
-        },
-        methods: {
-            logIn(){
-              if(this.user.username !== 'admin' || this.user.password !== 'admin') {
-                this.loginError = true;
-                return
-              }
-              
-              this.$cookies.set('local_login',this.user.username,'23h');
-              this.$router.push({ name: 'home' });
-            }
-        },
-        beforeRouteEnter (to, from, next) {
-          $cookies.get('local_login') ? next({ name: 'home' }) : next()
-        },
-    }
+import { mapGetters, mapActions } from 'vuex'
+export default {
+    data(){
+        return{
+            loginError: false,
+        }
+    },
+    methods: {
+        ...mapActions({
+          fetchUser: 'fetchUser'
+        }),
+        logIn(){
+          var getIndex = this.users.findIndex(obj => obj.username === this.user.username && obj.password === this.user.password);
+          var getRedircet = this.$route.query.redirect === undefined ? 'home' : this.$route.query.redirect;
+          if(getIndex == -1) {
+            this.loginError = true;
+            return
+          }
+          this.$cookies.set('local_login',this.users[getIndex].username,'23h');
+          this.$router.push({ name: getRedircet });
+        }
+    },
+    computed: {
+      ...mapGetters({
+        users: 'users',
+      }),
+    },
+    created(){
+      this.fetchUser();
+    },
+    beforeRouteEnter (to, from, next) {
+      $cookies.get('local_login') ? next({ name: 'home' }) : next()
+    },
+}
 </script>
 
 <style>

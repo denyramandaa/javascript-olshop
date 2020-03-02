@@ -6,7 +6,7 @@
       "image" : "/src/assets/monster/disruptor.png",
       "price" : 10000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 2,
@@ -14,7 +14,7 @@
       "image" : "/src/assets/monster/doom_bringer.png",
       "price" : 8000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 3,
@@ -22,7 +22,7 @@
       "image" : "/src/assets/monster/dragon_knight.png",
       "price" : 8000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 4,
@@ -30,7 +30,7 @@
       "image" : "/src/assets/monster/drow_ranger.png",
       "price" : 12000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Agility"
+      "category": "agility"
     },
     {
       "id" : 5,
@@ -38,7 +38,7 @@
       "image" : "/src/assets/monster/earth_spirit.png",
       "price" : 5000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 6,
@@ -46,7 +46,7 @@
       "image" : "/src/assets/monster/earthshaker.png",
       "price" : 6700,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 7,
@@ -54,7 +54,7 @@
       "image" : "/src/assets/monster/elder_titan.png",
       "price" : 9000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 8,
@@ -62,7 +62,7 @@
       "image" : "/src/assets/monster/ember_spirit.png",
       "price" : 8600,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Agility"
+      "category": "agility"
     },
     {
       "id" : 9,
@@ -70,7 +70,7 @@
       "image" : "/src/assets/monster/enchantress.png",
       "price" : 5600,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 10,
@@ -78,7 +78,7 @@
       "image" : "/src/assets/monster/enigma.png",
       "price" : 10000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 11,
@@ -86,7 +86,7 @@
       "image" : "/src/assets/monster/faceless_void.png",
       "price" : 4500,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Agility"
+      "category": "agility"
     },
     {
       "id" : 12,
@@ -94,7 +94,7 @@
       "image" : "/src/assets/monster/furion.png",
       "price" : 9000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 13,
@@ -102,7 +102,7 @@
       "image" : "/src/assets/monster/grimstroke.png",
       "price" : 7500,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 14,
@@ -110,7 +110,7 @@
       "image" : "/src/assets/monster/gyrocopter.png",
       "price" : 8900,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Agility"
+      "category": "agility"
     },
     {
       "id" : 15,
@@ -118,7 +118,7 @@
       "image" : "/src/assets/monster/huskar.png",
       "price" : 9800,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 16,
@@ -126,7 +126,7 @@
       "image" : "/src/assets/monster/invoker.png",
       "price" : 12000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 17,
@@ -134,7 +134,7 @@
       "image" : "/src/assets/monster/jakiro.png",
       "price" : 7500,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 18,
@@ -142,7 +142,7 @@
       "image" : "/src/assets/monster/juggernaut.png",
       "price" : 5600,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Agility"
+      "category": "agility"
     },
     {
       "id" : 19,
@@ -150,7 +150,7 @@
       "image" : "/src/assets/monster/keeper_of_the_light.png",
       "price" : 2000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Intelligence"
+      "category": "intelligence"
     },
     {
       "id" : 20,
@@ -158,7 +158,7 @@
       "image" : "/src/assets/monster/kunkka.png",
       "price" : 8700,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     },
     {
       "id" : 21,
@@ -166,19 +166,29 @@
       "image" : "/src/assets/monster/legion_commander.png",
       "price" : 4000,
       "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      "category": "Strength"
+      "category": "strength"
     }
   ],
   "categories" : [
-    "Agility",
-    "Intelligence",
-    "Strength"
+    "agility",
+    "intelligence",
+    "strength"
   ],
   "users" : [
     {
       "id": 1,
       "username": "admin",
       "password": "admin"
+    },
+    {
+      "id": 2,
+      "username": "deny",
+      "password": "deny"
+    },
+    {
+      "id": 3,
+      "username": "tamu",
+      "password": "tamu"
     }
   ]
 }

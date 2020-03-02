@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
   state:{
     products: [],
     categories: [],
+    users: [],
     trolly: []
   },
   getters:{
@@ -17,27 +18,25 @@ export const store = new Vuex.Store({
     categories(state){
       return state.categories
     },
+    users(state){
+      return state.users
+    },
     trolly(state){
       return state.trolly
     },
   },
   actions: {
-    fetchData({commit}) {
-      axios
-        .get('http://localhost:3000/products')
-        .then(({ data }) => {
-          commit('fetchProducts', data)
-        })
-        .catch( error => console.log(error))
+    addTrolly({commit}, payload) {
+      commit('setTrolly', payload)
     },
-    fetchDataByCategory({commit}, payload) {
-      axios
-        .get('http://localhost:3000/products')
-        .then(({ data }) => {
-          const result = data.filter(d => d.category == payload);
-          commit('fetchProductsCategory', result)
-        })
-        .catch( error => console.log(error))
+    decreaseTrolly({commit}, payload) {
+      commit('unsetTrolly', payload)
+    },
+    removeTrolly({commit}, payload){
+      commit('removeTrolly', payload)
+    },
+    printBill({commit}){
+      commit('destroyTrolly')
     },
     fetchCategory({commit}) {
       axios
@@ -47,22 +46,46 @@ export const store = new Vuex.Store({
         })
         .catch( error => console.log(error))
     },
-    addTrolly({commit}, payload) {
-      commit('setTrolly', payload)
+    fetchData({commit}) {
+      axios
+        .get('http://localhost:3000/products')
+        .then(({ data }) => {
+          commit('fetchProducts', data)
+        })
+        .catch( error => console.log(error))
+    },
+    fetchUser({commit}) {
+      axios
+        .get('http://localhost:3000/users')
+        .then(({ data }) => {
+          commit('fetchUsers', data)
+          console.log(data)
+        })
+        .catch( error => console.log(error))
     },
   },
   mutations: {
     fetchProducts(state, payload){
       state.products = payload;
     },
-    fetchProductsCategory(state, payload){
-      state.products = payload;
-    },
     fetchCategory(state, payload){
       state.categories = payload;
+    },
+    fetchUsers(state, payload){
+      state.users = payload;
     },
     setTrolly(state, payload){
       state.trolly.push(payload);
     },
+    unsetTrolly(state, payload){
+      const index = state.trolly.findIndex( ob => ob.id === payload.id )
+      if ( index > -1 ) state.trolly.splice(index, 1)
+    },
+    removeTrolly(state, payload){
+      state.trolly = state.trolly.filter( ob => ob.id !== payload.id )
+    },
+    destroyTrolly(state){
+      state.trolly = [];
+    }
   }
 });
