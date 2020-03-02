@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="mb-2 text-white text-right">
-          Total: Rp <span class="font-bold text-2xl">{{ finalPrice(trolly) | convertToRupiah }}</span>
+          Total: <span class="font-bold text-2xl">{{ finalPrice(trolly) | convertToRupiah }}</span>
         </div>
         <button class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none w-full" @click="checkOut(counterTrolly)">
           Checkout
