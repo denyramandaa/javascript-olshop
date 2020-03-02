@@ -15,7 +15,6 @@ npm run dev
 npm run build
 
 # additional
-npm install --save vue-resource
 npm install -g json-server
 
 #run this
