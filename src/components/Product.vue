@@ -48,8 +48,7 @@ export default {
     this.fetchData();
   },
   beforeRouteEnter (to, from, next) {
-    // var getRedirect = query.category === undefined ? 'product' : 'product'+query.category;
-    // console.log(getRedirect);
+    // var getRedirect = to.query.hasOwnProperty('category') ? 'product-'+to.query.category : 'product';
     $cookies.get('local_login') ? next() : next({ name: 'login', query: { redirect: 'product' } })
   },
 }

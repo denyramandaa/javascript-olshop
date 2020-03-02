@@ -23,6 +23,10 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
     data(){
         return{
+            user:{
+              username: 'admin',
+              password: 'admin'
+            },
             loginError: false,
         }
     },
@@ -31,13 +35,26 @@ export default {
           fetchUser: 'fetchUser'
         }),
         logIn(){
-          var getIndex = this.users.findIndex(obj => obj.username === this.user.username && obj.password === this.user.password);
-          var getRedircet = this.$route.query.redirect === undefined ? 'home' : this.$route.query.redirect;
-          if(getIndex == -1) {
+          var getIndexUser = this.users.findIndex(obj => obj.username === this.user.username && obj.password === this.user.password);
+          var getRedircet = this.$route.query.hasOwnProperty('redirect') ? this.$route.query.redirect : 'home';
+          if(getIndexUser == -1) {
             this.loginError = true;
             return
           }
-          this.$cookies.set('local_login',this.users[getIndex].username,'23h');
+          // if(this.$route.query.hasOwnProperty('redirect')){
+          //   var productHasCategory = this.$route.query.redirect.includes("-") ? this.$route.query.redirect.split("-") : this.$route.query.redirect;
+          //   this.$cookies.set('local_login',this.users[getIndexUser].username,'23h');
+          //   if(this.$route.query.redirect.includes("-")){
+          //     this.$router.push({ name: productHasCategory[0], query: { category: productHasCategory[1] } });
+          //     return
+          //   }
+          //   this.$router.push({ name: productHasCategory });
+          //   return
+          // }
+
+          
+
+          this.$cookies.set('local_login',this.users[getIndexUser].username,'23h');
           this.$router.push({ name: getRedircet });
         }
     },
