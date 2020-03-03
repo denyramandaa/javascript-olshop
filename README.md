@@ -31,7 +31,8 @@ if you get error like this:
 }),
 
 dont worry, just do this:
-npm install babel-preset-env --save-dev
+npm install babel-preset-env --save
+npm install --save babel-preset-stage-2
 
 then open your .babelsrc file and copy this:
 {
