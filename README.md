@@ -21,4 +21,25 @@ npm install -g json-server
 json-server --watch data.json
 ```
 
+## Error Handle
+``` bash
+if you get error like this:
+
+...mapGetters({
+^
+ allCard: 'allCard',
+}),
+
+dont worry, just do this:
+npm install babel-preset-env --save-dev
+
+then open your .babelsrc file and copy this:
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    ["stage-2"]
+  ], 
+}
+```
+
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
