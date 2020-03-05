@@ -39,11 +39,13 @@ export const store = new Vuex.Store({
     addTrolly({commit}, payload) {
       commit('setTrolly', payload)
     },
-    decreaseTrolly({commit}, payload) {
-      commit('unsetTrolly', payload)
+    decreaseTrolly({commit, state}, payload) {
+      const getTheItem = state.trolly.findIndex( ob => ob.id === payload.id )
+      if ( getTheItem > -1 ) commit('unsetTrolly', getTheItem)
     },
-    removeTrolly({commit}, payload){
-      commit('removeTrolly', payload)
+    removeTrolly({commit, state}, payload){
+      const getTheItem = state.trolly.filter( ob => ob.id !== payload.id )
+      commit('removeTrolly', getTheItem)
     },
     printBill({commit}){
       commit('destroyTrolly')
@@ -88,11 +90,10 @@ export const store = new Vuex.Store({
       state.trolly.push(payload);
     },
     unsetTrolly(state, payload){
-      const getTheItem = state.trolly.findIndex( ob => ob.id === payload.id )
-      if ( getTheItem > -1 ) state.trolly.splice(getTheItem, 1)
+      state.trolly.splice(payload, 1)
     },
     removeTrolly(state, payload){
-      state.trolly = state.trolly.filter( ob => ob.id !== payload.id )
+      state.trolly = payload
     },
     destroyTrolly(state){
       state.trolly = [];
