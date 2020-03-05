@@ -102,6 +102,11 @@ export default {
   .trolly.show{
     transform: translateX(0%);
   }
+  .trolly__wrapper{
+    overflow-y: scroll;
+    height: 90vh;
+    padding-right: 8px;
+  }
   .trolly--button{
     left: 0;
     top: 10%;

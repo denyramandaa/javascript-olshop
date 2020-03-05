@@ -46,3 +46,20 @@ export default {
   },
 }
 </script>
+<style>
+  ::-webkit-scrollbar-button {
+      background-color: #975a16;
+  }
+  ::-webkit-scrollbar {
+      width: 4px;
+  }
+  ::-webkit-scrollbar-corner {
+      background-color: #975a16;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: #f6ad55;
+  }
+  ::-webkit-scrollbar-track {
+      background-color: #975a16;
+  }
+</style>

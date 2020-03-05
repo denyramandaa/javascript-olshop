@@ -33,6 +33,7 @@
         logOut(){
           this.$cookies.remove('local_login');
           this.$router.push({ name: 'login' });
+          this.$store.dispatch('printBill');
         }
       },
       created(){

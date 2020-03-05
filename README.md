@@ -17,7 +17,7 @@ npm run build
 # additional
 npm install -g json-server
 
-#run this
+#run this for the axios data
 json-server --watch data.json
 ```
 
